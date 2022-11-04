@@ -1,21 +1,11 @@
-Η παρούσα εργασία υλοποιεί τον αλγόριθμο προσομειωμένης ανόπτησης (Simulated Annealing) στο πρόβλημα του Πλανώδιου Πωλητή
-(TSP) με local search 2-opt. Ως construction heuristic χρησιμοποιείται ο αλγόριθμος Nearest Neighbour για την κατασκευή μίας 
-αρχικής λύσης. 
+This project implements Simulated Annealing algorithm in the Traveling Salesman Problem (TSP) with 2-opt local search. As a construction heuristic, the Nearest Neighbor algorithm is used to construct an initial solution.
 
-#Περιεχόμενα
-Το παρόν αρχείο περιλαμβάνει τα αρχεία SA2opt.py, runSA2opt.py, readData.py και μία συλλογή τριών μετροπροβλημάτων για το 
-πρόβλημα του Πλανώδιου Πωλητή (berlin52.tsp, eil51.tsp, st70.tsp), τα οποία χρησιμοποιούν την Ευκλείδια μετρική δύο 
-διαστάσεων. Τα παραπάνω αρχεία χρησιμοποιούνται ως εξής:
-	•readData.py, είναι ο parser με τον οποίο διαβάζονται τα μετροπροβλήματα που προαναφέρθηκαν
-	•SA2opt.py, περιλαμβάνει τον κώδικα για την υλοποίηση των heuristic της περιγραφής
-	•runSA2opt.py, χρησιμοποιείται για να τρέξει το πρόγραμμα μέσω τερματικού (Terminal)
+#Procedure
+The following code runs in the terminal:
+$ python runSA2opt.py filename,
+where filename is the name of the snapshot file. For example, to implement the algorithm in berlin52.tsp the following command is executed:
+$ python runSA2opt.py berlin52.tsp
 
-#Διαδικασία 
-Στο τερματικό εκτελείται ο εξής κώδικας:
-	$ python runSA2opt.py filename 
-όπου filename είναι το όνομα του αρχείου με τα στιγμιότυπα. Για παράδειγμα, για να υλοποιηθούν οι αλγόριθμους πάνω 
-στο berlin52.tsp εκτελείται η εξής εντολή:
-	$ python runSA2opt.py berlin52.tsp
+#Results
+After running the code the optimal route is printed as well as the distance table.
 
-#Αποτελέσματα
-Αφού τρέξει ο κώδικας τυπώνεται η βέλτιστη διαδρομή, καθώς επίσης και ο πίνακας αποστάσεων.
